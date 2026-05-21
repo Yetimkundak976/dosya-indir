@@ -2,12 +2,17 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Yükleniyor...</title>
+    <title>İndiriliyor...</title>
 </head>
 <body>
     <script>
-        // Site açılır açılmaz ekrana hiçbir şey yansıtmadan direkt dosyayı indirir
-        window.location.href = "Noxroli.txt";
+        // Tarayıcının dosyayı ekranda açmasını engeller, direkt bilgisayara indirir
+        const link = document.createElement('a');
+        link.href = 'Noxroli.txt';
+        link.download = 'Noxroli.txt'; // Tarayıcıya "Bunu ekranda açma, indir" komutu verir
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     </script>
 </body>
 </html>
