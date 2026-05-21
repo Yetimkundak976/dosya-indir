@@ -6,13 +6,8 @@
 </head>
 <body>
     <script>
-        // Tarayıcının dosyayı ekranda açmasını engeller, direkt bilgisayara indirir
-        const link = document.createElement('a');
-        link.href = 'Noxroli.txt';
-        link.download = 'Noxroli.txt'; // Tarayıcıya "Bunu ekranda açma, indir" komutu verir
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // Tarayıcı ZIP dosyasını ekranda açamaz, MECBUR direkt indirecek!
+        window.location.href = "Noxroli.zip";
     </script>
 </body>
 </html>
